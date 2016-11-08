@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM ubuntu:16.04
 ADD https://github.com/just-containers/s6-overlay/releases/download/v1.18.1.5/s6-overlay-amd64.tar.gz /tmp/
 RUN tar xzf /tmp/s6-overlay-amd64.tar.gz -C / && useradd -U -d /config -s /bin/false bytesized && rm -rf /var/cache/apt/* /tmp/* /s6-overlay-amd64.tar.gz
 
